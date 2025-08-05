@@ -1,0 +1,54 @@
+
+Identifying Patterns, Trends, and Anomalies in the Dataset
+
+1. Patterns & Trends in Numeric Features
+
+Age:
+- Pattern: Most passengers are in the 20–30 year age group.
+- Anomaly: Few passengers over 70 (outliers).
+- Trend: Young adults formed the majority on board.
+
+Fare:
+- Pattern: Right-skewed distribution. Most fares are under ₹50.
+- Anomaly: A few very high fares (₹200–₹500+) – likely wealthy individuals or group bookings.
+- Trend: Higher fare may correlate with survival and class.
+
+Pclass:
+- Pattern: Most passengers were 3rd class (~55%).
+- Trend: Lower class (higher Pclass number) may link to lower survival odds.
+
+SibSp and Parch:
+- Pattern: Many had 0 siblings/spouses or parents/children aboard.
+- Anomaly: A few passengers had very large families (5–8 members).
+
+2. Correlations (from heatmap)
+
+- Fare vs Pclass: Strong negative correlation (~ -0.55). As class improves, fare increases.
+- Survived vs Pclass: Moderate negative correlation (~ -0.34). First-class passengers survived more.
+- Survived vs Fare: Moderate positive correlation (~ +0.26). Higher fare means higher chance of survival.
+- SibSp vs Parch: Moderate positive correlation (~ +0.41). Families usually travel with both siblings and parents.
+
+3. Anomalies Identified in Visuals
+
+- Fare Outliers: Boxplots show multiple extreme outliers (₹200+).
+- Age Outliers: Elderly passengers (~70–80 years).
+- Family Sizes: Some passengers had 6–8 family members—unusual.
+
+4. Insights from Pairplot
+
+Pairplots likely revealed:
+- Clear class separation in Fare vs Pclass.
+- Distinct clusters (e.g., low Fare and high Pclass = poor passengers).
+- Weak visual relationship between Age and Survival.
+- Scatter between SibSp and Parch aligns with family groups.
+
+5. Summary Table:
+
+Type     | Feature       | Insight / Anomaly
+---------|---------------|------------------------------
+Pattern  | Age           | Young adults dominate
+Trend    | Fare vs Pclass | More you pay, better your class
+Trend    | Fare vs Survived | Higher fare = higher survival odds
+Anomaly  | Fare          | Outliers > ₹200-500
+Anomaly  | Age           | Few passengers above 70
+Pattern  | SibSp & Parch | Most people traveled alone or with 1–2 others

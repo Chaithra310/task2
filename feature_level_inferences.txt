@@ -1,0 +1,44 @@
+
+Basic Feature-Level Inferences from Visuals
+
+1. Age
+- Histogram: Most passengers are young adults (20–30 years).
+- Boxplot: Few outliers among older passengers (70–80 years).
+- Inference: Age is right-skewed. Young passengers were the majority; age may influence survival or ticket class.
+
+2. Fare
+- Histogram: Highly skewed distribution. Most fares are below ₹50.
+- Boxplot: Several extreme outliers (₹200–₹500+).
+- Inference: Fare has a long right tail; very high fares may indicate VIPs or large groups. Suggests strong class and wealth differences.
+
+3. Pclass (Passenger Class)
+- Histogram: Most passengers are in 3rd class.
+- Boxplot: Pclass acts like a categorical feature (1, 2, 3).
+- Inference: Majority were in lower class (3rd); Pclass likely affects survival and Fare.
+
+4. SibSp (Siblings/Spouses Aboard)
+- Histogram: Most passengers traveled alone (0).
+- Boxplot: A few high values (5–8).
+- Inference: Small families or solo travelers were most common. Large groups are rare.
+
+5. Parch (Parents/Children Aboard)
+- Histogram: Most values are 0 (no parents or children).
+- Boxplot: Some outliers with large family sizes.
+- Inference: Like SibSp, most people didn’t travel with parents/children. Family structures were small.
+
+6. Survived (if present in your data)
+- Histogram: Class imbalance may exist (e.g., more 0s than 1s).
+- Boxplot: Acts like a binary category.
+- Inference: Useful for classification. Helps assess relationships with Age, Fare, Pclass, etc.
+
+7. Correlation Matrix
+- Fare vs Pclass: Strong negative correlation (better class = higher fare).
+- Survived vs Fare / Pclass: Survival positively linked with Fare, negatively with Pclass.
+- SibSp vs Parch: Moderately positive; families often include both.
+
+Overall Takeaways:
+- Fare and Pclass are strong predictors of survival.
+- Age and family size features show wide variation and outliers.
+- The dataset is right-skewed for both Age and Fare.
+- Many passengers traveled alone or with small families.
+- Some features behave like categories (e.g., Pclass, Survived).
